@@ -6,6 +6,11 @@
     "name": "Eldar Aliyev",
     "email": "eldar.aliyev8@gmail.com"
   },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aeldar/es6-express-scaffold-app.git"
+  },
   "engines": {
     "node": ">=0.12.0"
   },
