@@ -1,6 +1,6 @@
 {
   "name": "es6-express-scaffold-app",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "ES6, Express, gulp, browserify",
   "keywords": [
     "ES6",
@@ -82,6 +82,6 @@
   },
   "scripts": {
     "start": "node ./bin/www",
-    "deploy": "rsync -azP --delete dist/ ubuntu@batfish:/home/ubuntu/letter-az"
+    "deploy": "rsync -azP --delete dist/ ubuntu@my-server:/home/ubuntu/my-site"
   }
 }
