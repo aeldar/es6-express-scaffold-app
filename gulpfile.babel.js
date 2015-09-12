@@ -4,6 +4,7 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import runSequence from 'run-sequence';
+import cp from 'child_process';
 
 import source from 'vinyl-source-stream';
 import babelify from 'babelify';
@@ -177,19 +178,18 @@ gulp.task('extras:server:build', () => {
 });
 
 // Launch a Node.js/Express server
-gulp.task('express:dev', ['scripts:server:dev', 'extras:server:dev', 'html:dev'], function(cb) {
+gulp.task('express:dev', ['scripts:server:dev', 'extras:server:dev', 'html:dev'], (cb) => {
   src.server = [
     'bin/www',
     `${devDir}/${serverDir}/**/*`,
     `${devDir}/${clientDir}/**/*.html` // this is part of the server side in fact
   ];
 
-  var started = false;
-  var cp = require('child_process');
+  let started = false;
 
   var server = (function startup() {
-    var newEnv = process.env;
-    newEnv.APP_DEV = 1; // Add DEVELOPER mode
+    const newEnv = process.env;
+    newEnv.NODE_ENV = 'development'; // Add DEVELOPER mode
     var child = cp.fork('bin/www', {
       env: newEnv
     });

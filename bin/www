@@ -2,7 +2,7 @@
 
 var path = require('path');
 
-var isDevMode = !!process.env.APP_DEV;
+var isDevMode = process.env.NODE_ENV === 'development';
 var srcDir = (isDevMode) ? '/../.tmp/server/' : '/../dist/server/';
 
 /**
