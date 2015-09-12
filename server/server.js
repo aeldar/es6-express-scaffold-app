@@ -1,12 +1,10 @@
 import express from 'express';
 import path from 'path';
-import favicon from 'serve-favicon';
+//import favicon from 'serve-favicon';
 import logger from 'morgan';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import compression from 'compression';
-
-import _ from 'underscore';
 
 import config from './config/application';
 
@@ -47,7 +45,9 @@ app.use((req, res, next) => {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
+  /* eslint-disable no-unused-vars */
   app.use((err, req, res, next) => {
+    /* eslint-enable no-unused-vars */
     res.status(err.status || 500);
     res.render('error', {
       message: err.message,
@@ -58,7 +58,9 @@ if (app.get('env') === 'development') {
 
 // production error handler
 // no stacktraces leaked to user
+/* eslint-disable no-unused-vars */
 app.use((err, req, res, next) => {
+  /* eslint-enable no-unused-vars */
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,

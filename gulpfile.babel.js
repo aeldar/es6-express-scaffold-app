@@ -99,6 +99,7 @@ const testLintOptions = {
 };
 
 gulp.task('lint', lint(`${clientDir}/scripts/**/*.js`));
+gulp.task('lint:server', lint(`${serverDir}/**/*.js`));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 // prepare htmls for dev mode (to make them available for server side)
@@ -276,7 +277,7 @@ gulp.task('serve:test', () => {
 
 gulp.task('clean', del.bind(null, [`${devDir}`, `${buildDir}`]));
 
-gulp.task('build', ['lint', 'html:build', 'images', 'fonts', 'extras:client:build', 'scripts:server:build', 'extras:server:build'], () => {
+gulp.task('build', ['lint', 'lint:server', 'html:build', 'images', 'fonts', 'extras:client:build', 'scripts:server:build', 'extras:server:build'], () => {
   return gulp.src(`${buildDir}/${clientDir}/**/*`).pipe($.size({title: 'build', gzip: true}));
 });
 

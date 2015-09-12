@@ -4,8 +4,8 @@ import path from 'path';
 
 export default {
   staticDirs: [
-    path.join(__dirname + '/../../client'),
-    path.join(__dirname + '/../../../client'), // for orig resources those not compiled into .tmp/client
-    path.join(__dirname + '/../../../') // project root for serving bower_components
+    path.join(__dirname, '/../../client'),
+    path.join(__dirname, '/../../../client'), // for orig resources those not compiled into .tmp/client
+    path.join(__dirname, '/../../../') // project root for serving bower_components
   ]
 };
