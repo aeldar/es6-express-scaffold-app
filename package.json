@@ -1,7 +1,17 @@
 {
   "name": "es6-express-scaffold-app",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "ES6, Express, gulp, browserify",
+  "keywords": [
+    "ES6",
+    "Express",
+    "gulp",
+    "browserify",
+    "browsersync",
+    "bower",
+    "scaffold",
+    "SASS"
+  ],
   "author": {
     "name": "Eldar Aliyev",
     "email": "eldar.aliyev8@gmail.com"
