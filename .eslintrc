@@ -1,0 +1,22 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true
+  },
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "rules": {
+    // Strict mode
+    "strict": [2, "never"],
+
+    // allow console
+    "no-console": false,
+
+    // Code style
+    "indent": [2, 2],
+    "quotes": [2, "single"]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "ES6-express-scaffold-app",
+  "private": true,
+  "dependencies": {
+    "jquery.scrollTo": "~2.1.1",
+    "normalize-css": "normalize.css#~3.0.3"
+  },
+  "devDependencies": {
+    "chai": "~3.2.0",
+    "mocha": "~2.3.0"
+  }
+}
