@@ -1,6 +1,6 @@
 import path from 'path';
 
-module.exports = {
+export default {
   staticDirs: [
     path.join(__dirname + '/../../client')
   ]

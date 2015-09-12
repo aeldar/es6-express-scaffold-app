@@ -1,10 +1,6 @@
-var config;
+import configDev from './dev';
+import configProd from './prod';
 
-if (process.env.APP_DEV) {
-  config = require('./dev');
-}
-else {
-  config = require('./prod');
-}
+const config = (process.env.APP_DEV) ? configDev : configProd;
 
-module.exports = config;
+export default config;
