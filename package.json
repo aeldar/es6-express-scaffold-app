@@ -30,6 +30,7 @@
     "babel-eslint": "^4.1.1",
     "babelify": "^6.3.0",
     "body-parser": "~1.13.2",
+    "bower": "^1.7.9",
     "browser-sync": "^2.2.1",
     "browserify": "^11.0.1",
     "chai": "^3.2.0",
@@ -82,6 +83,9 @@
   },
   "scripts": {
     "start": "node ./bin/www",
-    "deploy": "rsync -azP --delete dist/ ubuntu@my-server:/home/ubuntu/my-site"
+    "deploy": "rsync -azP --delete dist/ ubuntu@my-server:/home/ubuntu/my-site",
+    "bower:install": "bower install",
+    "serve": "gulp serve",
+    "build": "gulp"
   }
 }

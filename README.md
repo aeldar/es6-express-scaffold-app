@@ -10,25 +10,24 @@ This is a scaffold app supporting ES6, legacy libraries, Bower dependencies, Bab
 Install
 -------
 
-    npm install -g gulp
     npm install
-    bower install
-    
+    npm bower:install
+
 Run in DEV mode
 ---------------
 
-    gulp serve
-    
+    npm run serve
+
 Build for production
 --------------------
 
-    gulp
-    
+    npm run build
+
 Run for production
 ------------------
 
     npm start
-    
+
 Author
 ------
 
